@@ -13,7 +13,7 @@
 
 # Exemple 1:
 
-# Entrée : s = "hello"
+s = "hello"
 
 # Sortie :  13
 
@@ -24,10 +24,17 @@
 
 # Exemple 2 :
 
-# Entrée : s = "zaz"
+# s = "zaz"
 
 # Sortie : 50
 
 # Explication:
 
 # Les valeurs ASCII des caractères ssont : 'z' = 122, 'a' = 97. Le score de sserait donc |122 - 97| + |97 - 122| = 25 + 25 = 50.
+
+score = 0
+
+for char in range(len(s)-1):
+  score += abs(ord(s[char]) - ord(s[char +1]))
+
+print(score)
