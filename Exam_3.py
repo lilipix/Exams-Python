@@ -9,7 +9,7 @@
 # D             500
 # M             1000
 
-# Par exemple,  2s'écrit comme II en chiffres romains, seulement deux uns additionnés. 12 s'écrit  XII, ce qui est simplement X + II.
+# Par exemple,  2 s'écrit comme II en chiffres romains, seulement deux uns additionnés. 12 s'écrit  XII, ce qui est simplement X + II.
 # Le nombre 27 s'écrit XXVII, ce qui est XX + V + II.
 
 
@@ -30,20 +30,40 @@
 
 # Exemple 1:
 
-# Entrée : s = "III"
+# s = "III"
 # Sortie : 3
 # Explication : III = 3.
 
 
 # Exemple 2 :
 
-# Entrée : s = "LVIII"
+# s = "LVIII"
 # Sortie : 58
 # Explication : L = 50, V= 5, III = 3.
 
 
 # Exemple 3 :
 
-# Entrée : s = « MCMXCIV »
+s = " MCMXCIV "
 # Sortie : 1994
 # Explication : M = 1000, CM = 900, XC = 90 et IV = 4.
+
+symbols = {
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M": 1000
+}
+
+total = 0
+new_s = s.strip()
+for i in range(len(new_s)):
+    if i < len(new_s) - 1 and symbols[new_s[i]] < symbols[new_s[i + 1]]:
+        total -= symbols[new_s[i]]
+    else:
+        total += symbols[new_s[i]]
+
+print(total)
