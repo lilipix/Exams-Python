@@ -5,7 +5,7 @@
 
 # Exemple 1:
 
-# Entrée : chiffres = [1,2,3]
+#chiffres = [1,2,3]
 # Sortie : [1,2,4]
 # Explication : Le tableau représente l'entier 123.
 # Incrémenter de un donne 123 + 1 = 124.
@@ -14,7 +14,7 @@
 
 # Exemple 2 :
 
-# Entrée : chiffres = [4,3,2,1]
+#chiffres = [4,3,2,1]
 # Sortie : [4,3,2,2]
 # Explication : Le tableau représente l'entier 4321.
 # Incrémenter de un donne 4321 + 1 = 4322.
@@ -23,8 +23,17 @@
 
 # Exemple 3 :
 
-# Entrée : chiffres = [9]
+chiffres = [9]
 # Sortie : [1,0]
 # Explication : Le tableau représente l'entier 9.
 # Incrémenter de un donne 9 + 1 = 10.
 # Ainsi, le résultat devrait être [1,0].
+
+
+new_number = chiffres[-1]
+new_number += 1
+del chiffres[-1]
+chiffres.append(new_number)
+print(chiffres)
+
+  

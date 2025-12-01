@@ -23,3 +23,6 @@
 
 # Entrée : s = "cbbd"
 # Sortie : "bb"
+
+for word in range(s):
+  
